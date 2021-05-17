@@ -2,7 +2,5 @@ apiVersion: v2
 name: go-todo-frontend
 description: "go-todo frontend application"
 type: application
-
 version: 0.1.0
-
-appVersion: "0.1"
+appVersion: master-dd226425
