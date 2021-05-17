@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: go-todo
+  name: go-todo-frontend-${DEPLOY_SUFFIX}
+spec:
+  selector:
+    app: go-todo-frontend-${DEPLOY_SUFFIX}
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
