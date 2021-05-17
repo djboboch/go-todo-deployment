@@ -1,0 +1,11 @@
+replicaCount: 1
+
+image:
+  repository: registry.gitlab.com/chrupek.tech/go-todo/go-todo-frontend
+
+metadata:
+  namespace: go-todo
+  name: go-todo-frontend
+
+ingress:
+  host: go-todo.chrupek.tech

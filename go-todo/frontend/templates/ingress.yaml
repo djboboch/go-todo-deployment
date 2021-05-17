@@ -1,19 +1,19 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  namespace: go-todo
-  name: go-todo-ingress-${DEPLOY_SUFFIX}
+  namespace: {{ .Values.metadata.namespace}}
+  name: {{ .Values.metadata.name}}
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-    - host: ${DEPLOY_HOST}
+    - host: {{.Values.ingress.host}}
       http:
         paths:
           - pathType: Prefix
             path: "/"
             backend:
               service:
-                name: go-todo-frontend-${DEPLOY_SUFFIX}
+                name: {{ .Values.metadata.name}}
                 port:
                   number: 80
