@@ -1,7 +1,6 @@
 apiVersion: v2
-name: applications
-description: Applicaitons
-
+name: deploy-applications
+description: "go-todo deployment app"
 type: application
 
 version: 0.1.0
