@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: {{.Values.config.name}}
-  namespace: {{.Values.metadata.namespace}}
+  name: go-todo-backend-config
+  namespace: go-todo
   labels:
-    app: {{.Values.metadata.name}}
+    app: go-todo-backend
 data:
-  DB_HOST: {{.Values.config.database.host}}
-  DB_PORT: {{.Values.config.database.port}}
-  DB_USER: {{.Values.config.database.user}}
-  DB_PASSWORD: {{.Values.config.database.password}}
-  DB_NAME: {{.Values.config.database.database}}
+  DB_HOST: go-todo-database
+  DB_PORT: 5432
+  DB_USER: golang
+  DB_PASSWORD: password
+  DB_NAME: golang
