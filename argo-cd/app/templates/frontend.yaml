@@ -11,6 +11,6 @@ spec:
     server: {{ .Values.spec.destination.server}}
   project: default
   source:
-    chart: go-todo/frontend
+    path: go-todo/frontend
     repoURL: {{ .Values.spec.source.repoURL}}
     targetRevision: {{ .Values.spec.source.targetRevision }}
