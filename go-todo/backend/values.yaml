@@ -7,6 +7,9 @@ metadata:
   name: go-todo-backend
   namespace: go-todo
 
+ingress:
+  host: api.go-todo.chrupek.tech
+
 config:
   name: go-todo-backend-config
   container:
