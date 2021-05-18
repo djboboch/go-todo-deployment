@@ -4,8 +4,8 @@ metadata:
   name: go-todo-backend-config
   namespace: go-todo
 data:
-  DB_HOST: "go-todo-database"
-  DB_PORT: "5432"
-  DB_USER: "golang"
-  DB_PASSWORD: "password"
-  DB_NAME: "golang"
+  DB_HOST: {{.Values.config.database.host | quote}}
+  DB_PORT: {{.Values.config.database.port | quote}}
+  DB_USER: {{.Values.config.database.user | quote}}
+  DB_PASSWORD: {{.Values.config.database.password | quote}}
+  DB_NAME: {{.Values.config.database.database | quote}}
