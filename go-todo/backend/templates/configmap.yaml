@@ -3,11 +3,9 @@ kind: ConfigMap
 metadata:
   name: go-todo-backend-config
   namespace: go-todo
-  labels:
-    app: go-todo-backend
 data:
-  DB_HOST: go-todo-database
-  DB_PORT: 5432
-  DB_USER: golang
-  DB_PASSWORD: password
-  DB_NAME: golang
+  DB_HOST: "go-todo-database"
+  DB_PORT: "5432"
+  DB_USER: "golang"
+  DB_PASSWORD: "password"
+  DB_NAME: "golang"
