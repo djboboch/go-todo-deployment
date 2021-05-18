@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: go-todo-frontend
+  name: go-todo-backend
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
