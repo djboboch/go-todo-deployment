@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{.Values.config.name}}
+  labels:
+    app: {{.Values.metadata.name}}
+data:
+  DB_HOST: {{.Values.config.database.host}}
+  DB_PORT: {{.Values.config.database.port}}
+  DB_USER: {{.Values.config.database.user}}
+  DB_PASSWORD: {{.Values.config.database.password}}
+  DB_NAME: {{.Values.config.database.database}}

@@ -16,17 +16,9 @@ spec:
       containers:
         - name: {{ .Values.metadata.name}}
           image: {{ .Values.image.repository}}:{{ .Chart.AppVersion}}
-          env:
-            - name: DB_HOST
-              value: {{.Values.config.database.host}}
-            - name: DB_PORT
-              value: {{.Values.config.database.port}}
-            - name: DB_USER
-              value: {{.Values.config.database.user}}
-            - name: DB_PASSWORD
-              value: {{.Values.config.database.password}}
-            - name: DB_NAME
-              value: {{.Values.config.database.database}}
+          envFrom:
+            - configMapRef:
+                name: {{.Values.config.name}}
           imagePullPolicy: Always
           ports:
             - containerPort: {{.Values.config.container.port}}

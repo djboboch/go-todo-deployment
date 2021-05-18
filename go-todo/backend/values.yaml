@@ -8,12 +8,13 @@ metadata:
   namespace: go-todo
 
 config:
+  name: go-todo-backend-config
   container:
     port: 80
     targetPort: 80
   database:
-    host: "go-todo-database"
-    database: "golang"
-    user: "golang"
-    password: "password"
-    port: "5432"
+    host: go-todo-database
+    database: golang
+    user: golang
+    password: password
+    port: 5432
