@@ -23,7 +23,7 @@ spec:
             - configMapRef:
                 name: {{.Values.config.name}}
           ports:
-            - containerPort: 5432
+            - containerPort: {{.Values.config.port}}
           volumeMounts:
             - mountPath: /var/lib/postgresql/data
               name: {{.Values.storage.name}}

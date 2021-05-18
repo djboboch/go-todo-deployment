@@ -13,3 +13,4 @@ config:
   database: golang
   user: golang
   password: password
+  port: 5432
