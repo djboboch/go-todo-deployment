@@ -9,3 +9,6 @@ metadata:
 
 ingress:
   host: go-todo.chrupek.tech
+
+backend:
+  url: api.go-todo.chrupek.tech

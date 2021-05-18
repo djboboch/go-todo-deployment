@@ -17,6 +17,9 @@ spec:
         - name: {{ .Values.metadata.name}}
           image: {{ .Values.image.repository}}:{{ .Chart.AppVersion}}
           imagePullPolicy: Always
+          env:
+            - name: VITE_BACKEND_URL
+              value: {{.Values.backend.url | quote}}
           ports:
             - containerPort: 80
       imagePullSecrets:
