@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: {{.Values.storage.volumeName}}
+  namespace: {{.Values.metadata.namespace}}
+  labels:
+    app: {{.Values.storage.name}}
+spec:
+  storageClassName: manual
+  capacity:
+    storage: {{.Values.storage.amount}}
+  accessModes:
+    - ReadWriteMany
+  hostPath:
+    path: "/mnt/data"
+  persistentVolumeReclaimPolicy: Retain

@@ -1,0 +1,15 @@
+metadata:
+  namespace: go-todo
+  name: go-todo-database
+
+storage:
+  name: go-todo-storage
+  claimName: go-todo-pvc
+  volumeName: go-todo-pv
+  amount: 10Gi
+
+config:
+  name: go-todo-db-config
+  database: golang
+  user: golang
+  password: password
