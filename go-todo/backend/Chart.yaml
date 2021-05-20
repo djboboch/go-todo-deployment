@@ -3,4 +3,4 @@ name: go-todo-backend
 description: "go-todo postgres backend"
 type: application
 version: 0.1.0
-appVersion: master-04354aa9
+appVersion: master-99af4513
