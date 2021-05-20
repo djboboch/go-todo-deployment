@@ -7,5 +7,6 @@ spec:
   selector:
     app: {{ .Values.metadata.name}}
   ports:
-    - port: {{.Values.config.container.port}}
-      targetPort: {{.Values.config.container.targetPort}}
+    - protocol: TCP
+      port: {{.Values.config.container.targetPort}}
+      targetPort: {{.Values.config.container.port}}
