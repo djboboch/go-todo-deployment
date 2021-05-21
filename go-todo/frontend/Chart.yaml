@@ -3,4 +3,4 @@ name: go-todo-frontend
 description: "go-todo frontend application"
 type: application
 version: 0.1.1
-appVersion: master-5c6d8ffa
+appVersion: master-0da878cd
